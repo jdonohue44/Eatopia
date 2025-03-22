@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eatopia - Get Started</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Eatopia</h1>
+        <p class="lead text-white">Cultivating ealthy eating habits</p>
+        <nav>
+            <a href="{{ url_for('landing_page') }}" class="text-white mx-2">Home</a>
+            <a href="{{ url_for('sms_setup') }}" class="text-white mx-2">SMS Setup</a>
+            <a href="{{ url_for('meal_tracking') }}" class="text-white mx-2">Meal Tracking</a>
+            <a href="{{ url_for('community') }}" class="text-white mx-2">Community</a>
+        </nav>
+    </header>
+
+    <main class="container my-2">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-sm p-4">
+                    <h3 class="mb-3 text-success" style="font-family: 'Segoe UI', sans-serif;">Start your journey to smarter eating</h3>
+                    <p>Eatopia gives you personalized nutrition help, recipe ideas, and photo-based meal tracking so you can stick to your health goals.</p>
+                    <form action="/signup" method="post">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">
+                                <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" width="20" style="margin-right: 5px;">+1
+                            </span>
+                            <input type="tel" name="phone" class="form-control" placeholder="e.g., 555-123-4567" style="margin-top: 0; margin-bottom: 0;" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="goal" class="form-label">What is your primary health goal?</label>
+                            <select class="form-select" name="goal" id="goal" required>
+                                <option value="">-- Select your goal --</option>
+                                <option value="weight_management">Reduce fat</option>
+                                <option value="build_muscle">Build muscle</option>
+                                <option value="more_energy">Increase energy</option>
+                                <option value="eat_better">Eat healthier overall</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">Get Started</button>
+                    </form>
+                    <p class="text-muted mt-3 small">No spam. Just thoughtful nutrition assistance backed by behavioral science and AI.</p>
+                </div>
+                <section class="community-preview">
+                    <p class="text-muted mt-3 small">See what others are achieving! <a href="/community">Join the community</a></p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

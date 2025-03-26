@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif !important;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     color: #333;
+    background: linear-gradient(145deg, #f2f8f5, #e7f0ec);
 }
 
 header {

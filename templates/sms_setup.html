@@ -11,13 +11,15 @@
 </head>
 <body>
     <header>
-        <h1>
+        <a href="{{ url_for('landing_page') }}" style="text-decoration: none; color: inherit;">
+          <h1>
             <img src="{{ url_for('static', filename='eatopia.png') }}" 
             alt="Eatopia Logo" 
             width="36" height="36"
             style="vertical-align: middle; margin-right: 8px; background-color: white; border-radius: 6px; padding: 2px;">
             Eatopia
-        </h1>
+          </h1>
+        </a>
         <nav>
             <a href="{{ url_for('landing_page') }}" class="text-white mx-2">Home</a>
             <a href="{{ url_for('sms_setup') }}" class="text-white mx-2">SMS Setup</a>
@@ -26,8 +28,9 @@
         </nav>
     </header>
 
-    <main class="container my-5">
-        <section class="example-messages mb-4">
+    <main class="container my-2">
+
+        <!-- <section class="example-messages mb-4">
             <h2 class="text-2xl font-bold mb-4 text-gray-800">What to Expect from SMS</h2>
             <ul class="space-y-4" style="list-style: none; padding: 4px; margin-bottom: 2px;">
               <li>
@@ -59,29 +62,29 @@
             <div class="mt-2 border-t pt-2 text-sm text-gray-700" style="font-style: italic; color: #6B7280; padding: 4px;">
               We take <strong>"no spam"</strong> seriously. Eatopia provides thoughtful nutrition assistance backed by behavioral science and AI.
             </div>
-          </section>                  
+          </section>                   -->
 
         <section class="setup mb-5">
             <h2 class="mb-4">Customize Your SMS Experience</h2>
             <form class="p-4 border rounded bg-white shadow-sm" action="/save-sms-preferences" method="post">
                 <!-- Message Type Selection -->
                 <fieldset class="mb-4">
-                    <legend class="h4 mb-3">Which SMS experiences would you like?</legend>
+                    <legend class="h4 mb-3">Which SMS features would you like to use?</legend>
                     <div class="form-check" style="margin: 4px;">
                         <input class="form-check-input" type="checkbox" name="grocery_lists" id="grocery_lists" checked>
-                        <label class="form-check-label" style="margin:2px" for="grocery_lists">Pre-made Grocery Lists 🥕</label>
+                        <label class="form-check-label" style="margin:2px" for="grocery_lists">🥕 Pre-made Grocery Lists <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">tailored to your nutrition goal</span></label>
                     </div>
                     <div class="form-check" style="margin: 4px;">
                         <input class="form-check-input" type="checkbox" name="recipe_ideas" id="recipe_ideas" checked>
-                        <label class="form-check-label" style="margin:2px" for="recipe_ideas">Recipe Idea Images 🖼️</label>
+                        <label class="form-check-label" style="margin:2px" for="recipe_ideas">🖼️ Recipe Idea Images <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">because recipe articles are full of spam</span></label>
                     </div>
                     <div class="form-check" style="margin: 4px;">
                         <input class="form-check-input" type="checkbox" name="facts_and_reminders" id="facts_and_reminders" checked>
-                        <label class="form-check-label" style="margin:2px" for="facts_and_reminders">Nutrition Facts and Reminders 🧠</label>
+                        <label class="form-check-label" style="margin:2px" for="facts_and_reminders">🧠 Nutrition Facts and Reminders <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">backed by behavioral science and AI</span></label>
                     </div>
                     <div class="form-check" style="margin: 4px;">
                         <input class="form-check-input" type="checkbox" name="image_upload" id="image_upload" checked>
-                        <label class="form-check-label" style="margin:2px" for="image_upload">Image Upload to Eatopia 📊</label>
+                        <label class="form-check-label" style="margin:2px" for="image_upload">📊 Image Upload to Eatopia <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">to track goal progress & get AI insights</span></label>
                     </div>
                 </fieldset>
         
@@ -116,7 +119,7 @@
                     </div>
                 </fieldset>
         
-                <button type="submit" class="btn btn-success">Save Preferences</button>
+                <button type="submit" class="w-25 btn btn-success btn-lg">Save Preferences</button>
             </form>
         </section>
         

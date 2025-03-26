@@ -11,13 +11,15 @@
 </head>
 <body>
     <header>
-        <h1>
-            <img src="{{ url_for('static', filename='eatopia.png') }}" 
-            alt="Eatopia Logo" 
-            width="36" height="36"
-            style="vertical-align: middle; margin-right: 8px; background-color: white; border-radius: 6px; padding: 2px;">
-            Eatopia
-        </h1>
+        <a href="{{ url_for('landing_page') }}" style="text-decoration: none; color: inherit;">
+            <h1>
+              <img src="{{ url_for('static', filename='eatopia.png') }}" 
+              alt="Eatopia Logo" 
+              width="36" height="36"
+              style="vertical-align: middle; margin-right: 8px; background-color: white; border-radius: 6px; padding: 2px;">
+              Eatopia
+            </h1>
+          </a>
         <!-- <p class="lead text-white">Cultivating healthy eating habits</p> -->
         <nav>
             <a href="{{ url_for('landing_page') }}" class="text-white mx-2">Home</a>
@@ -34,7 +36,7 @@
             <div class="col-md-6 col-lg-5">
                 <div class="card shadow-sm p-4">
                     <h3 class="mb-3 text-success" style="font-family: 'Segoe UI', sans-serif;">Start your journey to smarter eating</h3>
-                    <p>Eatopia provides personalized nutrition help, recipe ideas, and photo-based meal tracking so you can stick to your health goals.</p>
+                    <!-- <p>Eatopia provides personalized nutrition help, recipe ideas, and photo-based meal tracking so you can stick to your health goals.</p> -->
                     <form action="/signup" method="post">
                         <div class="input-group mb-3">
                             <span class="input-group-text">
@@ -47,14 +49,14 @@
                             <label for="goal" class="form-label">What is your primary health goal?</label>
                             <select class="form-select" name="goal" id="goal" required>
                                 <option value="">-- Select your goal --</option>
-                                <option value="weight_management">Reduce fat</option>
+                                <option value="weight_management">Lose fat</option>
                                 <option value="build_muscle">Build muscle</option>
                                 <option value="more_energy">Increase energy</option>
                                 <option value="eat_better">Eat healthier overall</option>
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-success w-100">Get Started</button>
+                        <button type="submit" class="w-100 btn btn-success btn-lg">Get Started</button>
                     </form>
                     <p class="text-muted mt-3 small">No spam. Just thoughtful nutrition assistance backed by behavioral science and AI.</p>
                 </div>

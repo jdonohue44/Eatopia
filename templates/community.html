@@ -11,13 +11,15 @@
 </head>
 <body>
     <header>
-        <h1>
-            <img src="{{ url_for('static', filename='eatopia.png') }}" 
-            alt="Eatopia Logo" 
-            width="36" height="36"
-            style="vertical-align: middle; margin-right: 8px; background-color: white; border-radius: 6px; padding: 2px;">
-            Eatopia
-        </h1>
+        <a href="{{ url_for('landing_page') }}" style="text-decoration: none; color: inherit;">
+            <h1>
+              <img src="{{ url_for('static', filename='eatopia.png') }}" 
+              alt="Eatopia Logo" 
+              width="36" height="36"
+              style="vertical-align: middle; margin-right: 8px; background-color: white; border-radius: 6px; padding: 2px;">
+              Eatopia
+            </h1>
+          </a>
         <nav>
             <a href="{{ url_for('landing_page') }}" class="text-white mx-2">Home</a>
             <a href="{{ url_for('sms_setup') }}" class="text-white mx-2">SMS Setup</a>
@@ -26,7 +28,7 @@
         </nav>
     </header>
     
-    <main>
+    <main class="container my-2">
         <!-- <section class="community-posts">
             <h2>Community Success Stories & Tips</h2>
             <ul>
@@ -73,7 +75,7 @@
             <form action="/post-community" method="post">
                 <input type="text" name="title" placeholder="Post Title" required>
                 <textarea name="content" placeholder="Share your journey..." required></textarea>
-                <button type="submit">Post</button>
+                <button type="submit" class="w-25 btn btn-success btn-lg">Post</button>
             </form>
         </section>
     </main>

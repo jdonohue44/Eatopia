@@ -16,6 +16,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Twilio Client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+test_phone_number = "+17778889999"
 
 # OpenAI Client
 openai.api_key = OPENAI_API_KEY
@@ -131,7 +132,7 @@ def send_test_sms():
     message = twilio_client.messages.create(
         body="👋 Hello from Eatopia test route!",
         from_=TWILIO_PHONE_NUMBER,
-        to="+17575137689"  # replace this temporarily
+        to=test_phone_number
     )
     return f"Sent message with SID: {message.sid}"
 

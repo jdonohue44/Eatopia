@@ -64,15 +64,15 @@
             <!-- <h2 class="mb-4">Customize Your SMS Experience</h2> -->
             <form class="p-4 border rounded bg-white shadow-sm" action="/save-sms-preferences" method="post">
                 <!-- Message Type Selection -->
-                <fieldset class="">
-                    <legend class="h4 mb-3">Customize Your SMS Experience</legend>
+                <fieldset class="mb-4">
+                    <legend class="h4 mb-3">SMS Features</legend>
                     <div class="form-check" style="margin: 4px;font-weight: 600;">
                         <input class="form-check-input" type="checkbox" name="grocery_lists" id="grocery_lists" checked>
                         <label class="form-check-label" style="margin:4px" for="grocery_lists">🥕 Pre-made Grocery Lists <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">tailored to your nutrition goal</span></label>
                     </div>
                     <div class="form-check" style="margin: 4px;font-weight: 600;">
                         <input class="form-check-input" type="checkbox" name="recipe_ideas" id="recipe_ideas" checked>
-                        <label class="form-check-label" style="margin:4px" for="recipe_ideas">🖼️ Recipe Idea Images <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">inspiration without the long article</span></label>
+                        <label class="form-check-label" style="margin:4px" for="recipe_ideas">🖼️ Meal Ideas <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">image-based inspiration without the long article</span></label>
                     </div>
                     <div class="form-check" style="margin: 4px;font-weight: 600;">
                         <input class="form-check-input" type="checkbox" name="facts_and_reminders" id="facts_and_reminders" checked>
@@ -80,35 +80,22 @@
                     </div>
                     <div class="form-check" style="margin: 4px;font-weight: 600;">
                         <input class="form-check-input" type="checkbox" name="image_upload" id="image_upload" checked>
-                        <label class="form-check-label" style="margin:4px" for="image_upload">📊 Image Upload to Eatopia <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">to track goal progress & get insights</span></label>
+                        <label class="form-check-label" style="margin:4px" for="image_upload">📊 Send Images to Eatopia <span style="font-size: 0.875rem; color: #6B7280; font-weight: normal;">to track goal progress & get insights</span></label>
                     </div>
                 </fieldset>
 
                 <!-- Disclaimer -->
-                <div class="mb-4 border-t pt-2 text-sm text-gray-700" style="font-style: italic; color: #6B7280; padding: 4px;">
+                <!-- <div class="mb-4 border-t pt-2 text-sm text-gray-700" style="font-style: italic; color: #6B7280; padding: 4px;">
                   We take <strong>no spam</strong> seriously. Eatopia will only message thoughtful nutrition assistance backed by behavioral science and AI.
                 </div>
-        
+         -->
                 <!-- Timing Preferences -->
                 <fieldset class="mb-4">
-                    <legend class="h4 mb-3">When do you usually...</legend>
+                    <legend class="h4 mb-3">Timing Preferences</legend>
                     <div class="mb-3">
-                        <label for="grocery_day" class="form-label">Grocery shop</label>
+                        <label for="grocery_day" class="form-label">Grocery list day</label>
                         <select class="form-select" name="grocery_day" id="grocery_day">
-                            <option value="">-- Select a day --</option>
-                            <option>Monday</option>
-                            <option>Tuesday</option>
-                            <option>Wednesday</option>
-                            <option>Thursday</option>
-                            <option>Friday</option>
-                            <option>Saturday</option>
-                            <option>Sunday</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="takeout_day" class="form-label">Order takeout</label>
-                        <select class="form-select" name="takeout_day" id="takeout_day">
-                            <option value="">-- Select a day --</option>
+                            <option value="Sunday">Sunday</option>
                             <option>Monday</option>
                             <option>Tuesday</option>
                             <option>Wednesday</option>

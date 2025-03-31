@@ -79,7 +79,7 @@ def signup():
         print(f"Sent SMS to {phone}: {message.sid}")
     except Exception as e:
         print(f"Error sending SMS: {e}")
-    return redirect(url_for('sms_setup'))
+    return redirect(url_for('meal_tracking'))
 
 @app.route('/save-sms-preferences', methods=['POST'])
 def save_sms_preferences():
